@@ -30,7 +30,7 @@ public class Professor extends Funcionarios {
         System.out.println("A quantidade de alunos que esse professor dá aula é: " + this.getQuantidadeDeAlunos());
         System.out.println("Lista de estagiários: ");
         for (Estagiario estagiario : listaDeEstagiarios) {
-            System.out.println("Professor: " + estagiario.getNome());
+            System.out.println("Estagiário: " + estagiario.getNome());
         }
         aumentarSalario();
         System.out.println("O salário desse professor após o reajuste será de: " + this.getSalario() + "R$");
@@ -47,8 +47,8 @@ public class Professor extends Funcionarios {
     }
 
     public void adicionarEstagiario(Estagiario estagiario) {
-        if (listaDeEstagiarios.size() > 2) {
-            System.out.println("Um professor não pode ter mais que dois estagiários");
+        if (listaDeEstagiarios.size() > 3) {
+            System.out.println("O professor não pode ter mais que 2 estagiários");
         } else {
             this.listaDeEstagiarios.add(estagiario);
         }

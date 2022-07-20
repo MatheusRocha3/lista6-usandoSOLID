@@ -14,7 +14,6 @@ public class Estagiario implements Reembolso {
         Reembolso.super.reembolsoDeDespesa();
     }
     public void apresentar() {
-        System.out.println("Lista de estagiários.");
         System.out.println("O nome do estagiário é: " + this.nomeEstagiarios);
     }
     public String getNome () {

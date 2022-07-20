@@ -8,6 +8,7 @@ public class Main {
         Professor professor1 = new Professor("André Buscaratti", "666.666.666.66", "6666", "Secretaria Geral", 3000, "Mestre em Letras", "Português");
         Professor professor2 = new Professor("João da Silva", "777.777.777.77", "7777", "Secretaria Geral", 3000, "Mestre em Geografia", "Geografia");
         Cordenador coordenador1 = new Cordenador("Patricia Pereira", "888.888.888.88", "8888", "Secretaria Geral", 4000);
+        coordenador1.apresentar();
         coordenador1.reembolsoDeDespesa();
         coordenador1.adicionarProfessor(professor1);
         coordenador1.adicionarProfessor(professor2);
@@ -15,8 +16,10 @@ public class Main {
         Turma turma2 = new Turma("Oitavo 7", 20);
         Estagiario estagiario1 = new Estagiario("Pedro", 500);
         Estagiario estagiario2 = new Estagiario("João", 500);
+        Estagiario estagiario3 = new Estagiario("Jster", 500);
         professor1.adicionarTurma(turma1);
         professor1.adicionarEstagiario(estagiario1);
+        professor1.adicionarEstagiario(estagiario2);
         professor2.adicionarTurma(turma2);
         professor2.adicionarEstagiario(estagiario2);
         professor1.apresentar();
