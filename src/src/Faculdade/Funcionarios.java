@@ -1,6 +1,6 @@
 package Faculdade;
 
-public abstract class Funcionarios {
+public abstract class Funcionarios implements Reembolso {
 
     private  String nome;
     private String cpf;

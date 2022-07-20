@@ -31,6 +31,4 @@ public class FuncionarioAdministrativo extends Funcionarios{
     public String getSenioridade() {
         return senioridade;
     }
-
-
 }

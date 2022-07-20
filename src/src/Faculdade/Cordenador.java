@@ -1,7 +1,7 @@
 package Faculdade;
 import java.util.*;
 public class Cordenador extends  Funcionarios {
-    private final Set<Professor> professoresSupervisionados = new HashSet<>();
+    private final List<Professor> listaprofessoresSupervisionados = new ArrayList<>();
 
     public Cordenador(String nome, String cpf, String numeroDoRegistro, String orgaoDeLotacao, double salario) {
         super(nome, cpf, numeroDoRegistro, orgaoDeLotacao, salario);
@@ -20,11 +20,16 @@ public class Cordenador extends  Funcionarios {
         aumentarSalario();
         System.out.println("Depois do reajuste de 5% o salário desse coordenador será de: R$" + this.getSalario());
         System.out.println("Lista de professores supervisionados: ");
-        for (Professor profesor : professoresSupervisionados) {
+        for (Professor profesor : listaprofessoresSupervisionados) {
             System.out.println("Professor: " + profesor.getNome());
         }
     }
+
     public void adicionarProfessor(Professor professoresSupervisionados) {
-        this.professoresSupervisionados.add(professoresSupervisionados);
+        if (listaprofessoresSupervisionados.size() > 10) {
+            System.out.println("O número máximo de professores é 10");
+        } else {
+            this.listaprofessoresSupervisionados.add(professoresSupervisionados);
+        }
     }
 }
