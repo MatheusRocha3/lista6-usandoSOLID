@@ -1,6 +1,6 @@
 package Faculdade;
 
-public abstract class Funcionarios implements Reembolso {
+public abstract class Funcionarios implements ReajjusteSalario {
 
     private  String nome;
     private String cpf;
@@ -16,7 +16,8 @@ public abstract class Funcionarios implements Reembolso {
         this.salario = (salario);
     }
 
-    public abstract void aumentarSalario();
+
+
     public void apresentar(){
         System.out.println("O nome do funcionário é: " + this.getNome());
         System.out.println("O CPF do funcionário é: : " + this.getCpf());
@@ -39,4 +40,5 @@ public abstract class Funcionarios implements Reembolso {
     public double getSalario() {
         return salario;
     }
+
 }

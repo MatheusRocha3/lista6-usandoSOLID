@@ -8,19 +8,14 @@ public class FuncionarioAdministrativo extends Funcionarios{
         this.setFuncaoAdministrativa(funcaoAdministrativa);
         this.senioridade = senioridade;
     }
-    @Override
-    public void aumentarSalario() {
-        double reajuste = (10 * this.salario)/100;
-        this.salario += reajuste;
-    }
+
+
     @Override
     public void apresentar() {
         System.out.println("Lista de funcionários da equipe administrativa: ");
         System.out.println("O nome do funcionário admistrativo é: " + this.getNome());
         System.out.println("Tipo de função: " + this.getFuncaoAdministrativa());
         System.out.println("Senioridade: " + this.getSenioridade());
-        this.aumentarSalario();
-        System.out.println("Novo salário com o aumento de 10% R$" + this.getSalario());
     }
     public String getFuncaoAdministrativa() {
         return funcaoAdministrativa;
@@ -30,5 +25,20 @@ public class FuncionarioAdministrativo extends Funcionarios{
     }
     public String getSenioridade() {
         return senioridade;
+    }
+
+
+
+    @Override
+    public void reembolsoDeDespesas() {
+
+    }
+
+
+    @Override
+    public void aumentoSalario() {
+        System.out.println();
+        double aumento = this.getSalario() * 10 /100;
+        System.out.println("O aumento feito em seu salário foi de 10% : R$ " + aumento);
     }
 }

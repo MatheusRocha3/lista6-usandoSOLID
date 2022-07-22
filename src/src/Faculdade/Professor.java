@@ -15,11 +15,6 @@ public class Professor extends Funcionarios {
         this.setDiciplinaMinistrada(diciplinaMinistrada);
     }
 
-    @Override
-    public void aumentarSalario() {
-        double reajuste = (10 * this.salario) / 100;
-        this.salario += reajuste;
-    }
 
     @Override
     public void apresentar() {
@@ -32,8 +27,6 @@ public class Professor extends Funcionarios {
         for (Estagiario estagiario : listaDeEstagiarios) {
             System.out.println("Estagiário: " + estagiario.getNome());
         }
-        aumentarSalario();
-        System.out.println("O salário desse professor após o reajuste será de: " + this.getSalario() + "R$");
         for (Turma turma1 : turma) {
             System.out.println("Nome da turma: " + turma1.getNomeDaTurma());
 
@@ -52,37 +45,52 @@ public class Professor extends Funcionarios {
         } else {
             this.listaDeEstagiarios.add(estagiario);
         }
-        }
-
-        public String getNivelDeGraduacao () {
-            return nivelDeGraduacao;
-        }
-
-        public void setNivelDeGraduacao (String nivelDeGraduacao){
-            this.nivelDeGraduacao = nivelDeGraduacao;
-        }
-
-        public String getDiciplinaMinistrada () {
-            return diciplinaMinistrada;
-        }
-
-        public void setDiciplinaMinistrada (String diciplinaMinistrada){
-            this.diciplinaMinistrada = diciplinaMinistrada;
-        }
-
-        public int getQuantidadeDeAlunos () {
-            return quantidadeDeAlunos;
-        }
-
-        public void setQuantidadeDeAlunos ( int quantidadeDeAlunos){
-            this.quantidadeDeAlunos = quantidadeDeAlunos;
-        }
-
-        public int getQuantidadeDeTurmas () {
-            return quantidadeDeTurmas;
-        }
-
-        public void setQuantidadeDeTurmas ( int quantidadeDeTurmas){
-            this.quantidadeDeTurmas = quantidadeDeTurmas;
-        }
     }
+
+    public String getNivelDeGraduacao () {
+        return nivelDeGraduacao;
+    }
+
+    public void setNivelDeGraduacao (String nivelDeGraduacao){
+        this.nivelDeGraduacao = nivelDeGraduacao;
+    }
+
+    public String getDiciplinaMinistrada () {
+        return diciplinaMinistrada;
+    }
+
+    public void setDiciplinaMinistrada (String diciplinaMinistrada){
+        this.diciplinaMinistrada = diciplinaMinistrada;
+    }
+
+    public int getQuantidadeDeAlunos () {
+        return quantidadeDeAlunos;
+    }
+
+    public void setQuantidadeDeAlunos ( int quantidadeDeAlunos){
+        this.quantidadeDeAlunos = quantidadeDeAlunos;
+    }
+
+    public int getQuantidadeDeTurmas () {
+        return quantidadeDeTurmas;
+    }
+
+    public void setQuantidadeDeTurmas ( int quantidadeDeTurmas){
+        this.quantidadeDeTurmas = quantidadeDeTurmas;
+    }
+
+
+    @Override
+    public void reembolsoDeDespesas() {
+
+    }
+
+
+    @Override
+    public void aumentoSalario() {
+        System.out.println();
+        double aumento = this.getSalario() * 10 /100;
+        System.out.println("O aumento feito em seu salário foi de 10% : R$ " + aumento);
+    }
+}
+

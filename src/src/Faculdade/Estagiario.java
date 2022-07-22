@@ -8,11 +8,6 @@ public class Estagiario implements Reembolso {
         this.nomeEstagiarios = (nome);
         this.bolsaEstudo = (bolsaEstudo);
     }
-
-    @Override
-    public void reembolsoDeDespesa() {
-        Reembolso.super.reembolsoDeDespesa();
-    }
     public void apresentar() {
         System.out.println("O nome do estagiário é: " + this.nomeEstagiarios);
     }
@@ -28,4 +23,12 @@ public class Estagiario implements Reembolso {
     public void setBolsaEstudo (double bolsaEstudo) {
         this.bolsaEstudo = bolsaEstudo;
     }
-}
+
+    @Override
+    public void reembolsoDeDespesas() {
+
+    }
+
+
+
+    }

@@ -7,18 +7,13 @@ public class Cordenador extends  Funcionarios {
         super(nome, cpf, numeroDoRegistro, orgaoDeLotacao, salario);
     }
 
-    @Override
-    public void aumentarSalario() {
-        double reajuste = (5 * this.getSalario()) / 100;
-        this.salario += reajuste;
-    }
+
+
 
     @Override
     public void apresentar() {
         System.out.println("Lista de coordenadores: ");
         System.out.println("O nome do coordenador é: " + this.getNome());
-        aumentarSalario();
-        System.out.println("Depois do reajuste de 5% o salário desse coordenador será de: R$" + this.getSalario());
         System.out.println("Lista de professores supervisionados: ");
         for (Professor profesor : listaprofessoresSupervisionados) {
             System.out.println("Professor: " + profesor.getNome());
@@ -32,4 +27,19 @@ public class Cordenador extends  Funcionarios {
             this.listaprofessoresSupervisionados.add(professoresSupervisionados);
         }
     }
+
+
+    @Override
+    public void reembolsoDeDespesas() {
+
+    }
+
+
+    @Override
+    public void aumentoSalario() {
+        System.out.println();
+        double aumento = this.getSalario() * 5 /100;
+        System.out.println("O aumento feito em seu salário foi de 10% : R$ " + aumento);
+    }
 }
+
